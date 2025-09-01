@@ -413,22 +413,22 @@ const Blogs = () => {
     const handlePost = async (values) => {
 
         const postData = {
-            title: values.title,
-            mtitle: values.mtitle,
-            mdesc: values.mdesc,
-            category: values.category,
-            tag: values.tag,
-            conclusion: values.conclusion,
+            title: values?.title,
+            mtitle: values?.mtitle,
+            mdesc: values?.mdesc,
+            category: values?.category,
+            tag: values?.tag,
+            conclusion: values?.conclusion,
             author: auth1?.user?._id,
             image: image1,
             content: editorContent,
-            faqs: values.faqs,
-            alt: values.alt,
-            source: values.source,
-            slug: values.slug,
-            subtitle: values.subtitle,
-            Ads: values.Ads,
-            linkArray: values.linkArray,
+            faqs: values?.faqs,
+            alt: values?.alt,
+            source: values?.source,
+            slug: values?.slug,
+            subtitle: values?.subtitle,
+            Ads: values?.Ads,
+            linkArray: values?.linkArray,
              images: images
 
 
@@ -476,21 +476,21 @@ const Blogs = () => {
     const handlePut = async (values) => {
 
         const postData = {
-            title: values.title,
-            mtitle: values.mtitle,
-            mdesc: values.mdesc,
-            category: values.category,
-            tag: values.tag,
+            title: values?.title,
+            mtitle: values?.mtitle,
+            mdesc: values?.mdesc,
+            category: values?.category,
+            tag: values?.tag,
             author: auth1?.user?._id,
             content: editorContent,
-            faqs: values.faqs,
-            alt: values.alt,
-            Ads: values.Ads,
-            linkArray: values.linkArray,
-            conclusion: values.conclusion,
-            slug: values.slug,
-            source: values.source,
-            subtitle: values.subtitle,
+            faqs: values?.faqs,
+            alt: values?.alt,
+            Ads: values?.Ads,
+            linkArray: values?.linkArray,
+            conclusion: values?.conclusion,
+            slug: values?.slug,
+            source: values?.source,
+            subtitle: values?.subtitle,
             image: imageTrue ? image1 : values.logo,
              images: images
 
@@ -729,14 +729,14 @@ const Blogs = () => {
                     <Form.Item
                         name="subtitle"
                         label="Subtitle"
-                        rules={[{ required: true, message: "Please input the name!" }]}
+                        // rules={[{ required: true, message: "Please input the name!" }]}
                     >
                         <Input placeholder="Enter Blog subtitle" />
                     </Form.Item>
                     <Form.Item
                         name="source"
                         label="Source"
-                        rules={[{ required: true, message: "Please Enter the source!" }]}
+                        // rules={[{ required: true, message: "Please Enter the source!" }]}
                     >
                         <Input placeholder="Enter News source" />
                     </Form.Item>
@@ -987,8 +987,8 @@ const Blogs = () => {
                         </>
                     )}
 
-
-                    <Form.Item
+{/*   
+   <Form.Item
                         name="alt"
                         label="Alt"
                         rules={[{ required: true, message: "Please input the name!" }]}
@@ -996,6 +996,8 @@ const Blogs = () => {
                         <Input placeholder="Enter Image alt" />
                     </Form.Item>
 
+*/ }
+                   
 
                     {/* image array */}
           <Form.Item label="Upload Icons">
